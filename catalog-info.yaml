@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: ei93iu0lg-python-gitops
+  description: This is GitOps manifest for ei93iu0lg-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=ei93iu0lg-python
+    backstage.io/kubernetes-id: ei93iu0lg-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: ei93iu0lg-python
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:ei93iu0lg-python
